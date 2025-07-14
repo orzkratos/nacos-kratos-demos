@@ -29,14 +29,16 @@ func wireApp(confServer *conf.Server, confData *conf.Data, logger log.Logger) (*
 		return nil, nil, err
 	}
 	nacosNamingClient := data.NewNacosNamingClient()
-	demo1Client, cleanup2 := data.NewDemo1Client(nacosNamingClient, logger)
-	greeterRepo := data.NewGreeterRepo(dataData, demo1Client, logger)
+	demo1GrpcClient, cleanup2 := data.NewDemo1GrpcClient(nacosNamingClient, logger)
+	demo1HttpClient, cleanup3 := data.NewDemo1HttpClient(nacosNamingClient, logger)
+	greeterRepo := data.NewGreeterRepo(dataData, demo1GrpcClient, demo1HttpClient, logger)
 	greeterUsecase := biz.NewGreeterUsecase(greeterRepo, logger)
 	greeterService := service.NewGreeterService(greeterUsecase)
 	grpcServer := server.NewGRPCServer(confServer, greeterService, logger)
 	httpServer := server.NewHTTPServer(confServer, greeterService, logger)
 	app := newApp(logger, grpcServer, httpServer)
 	return app, func() {
+		cleanup3()
 		cleanup2()
 		cleanup()
 	}, nil

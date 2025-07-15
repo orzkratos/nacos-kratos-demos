@@ -22,7 +22,7 @@ require (
 	github.com/yyle88/mutexmap v1.0.14 // indirect
 	github.com/yyle88/printgo v1.0.5 // indirect
 	github.com/yyle88/rese v0.0.10 // indirect
-	github.com/yyle88/sure v0.0.39 // indirect
+	github.com/yyle88/sure v0.0.40 // indirect
 	github.com/yyle88/syntaxgo v0.0.53 // indirect
 	github.com/yyle88/tern v0.0.8 // indirect
 	github.com/yyle88/zaplog v0.0.26 // indirect

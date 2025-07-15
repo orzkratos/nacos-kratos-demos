@@ -33,7 +33,7 @@ merge-step4:
 merge-step5:
 	depbump
 	cd demo1kratos && depbump directs
-	cd demo1kratos && depbump directs
+	cd demo2kratos && depbump directs
 
 merge-step6:
 	go clean -testcache

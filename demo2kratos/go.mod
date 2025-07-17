@@ -3,8 +3,8 @@ module github.com/orzkratos/demokratos/demo2kratos
 go 1.22.8
 
 require (
-	github.com/go-kratos/kratos/contrib/config/nacos/v2 v2.0.0-20250527152916-d6f5f00cf562
-	github.com/go-kratos/kratos/contrib/registry/nacos/v2 v2.0.0-20250527152916-d6f5f00cf562
+	github.com/go-kratos/kratos/contrib/config/nacos/v2 v2.0.0-20250716060240-ac92cbe5701c
+	github.com/go-kratos/kratos/contrib/registry/nacos/v2 v2.0.0-20250716060240-ac92cbe5701c
 	github.com/go-kratos/kratos/v2 v2.8.4
 	github.com/google/wire v0.6.0
 	github.com/nacos-group/nacos-sdk-go v1.1.5
@@ -39,7 +39,7 @@ require (
 	github.com/opentracing/opentracing-go v1.2.1-0.20220228012449-10b1cf09e00b // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/yyle88/mutexmap v1.0.14 // indirect
-	github.com/yyle88/sure v0.0.39 // indirect
+	github.com/yyle88/sure v0.0.40 // indirect
 	github.com/yyle88/syntaxgo v0.0.53 // indirect
 	github.com/yyle88/zaplog v0.0.26 // indirect
 	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
